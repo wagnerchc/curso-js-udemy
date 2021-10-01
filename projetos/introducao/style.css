@@ -1,0 +1,17 @@
+:root{
+    padding: 0px;
+    border: 0px;
+    margin: 0px;
+    /* Color Theme Swatches in Hex */
+    --color1: #8C8627;
+    --color2: #736355;
+    --color3: #A69586;
+    --color4: #D9CCC5;
+    --color5: #F2F0F0;
+    --color6: #000000;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+body{
+    background-color: var(--color5);
+    color: var(--color6);
+}
