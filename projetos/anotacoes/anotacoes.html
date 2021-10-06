@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objeto em JS</title>
+    <script src="anotacoes.js"></script>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <h1>Anotações e testes das aulas</h1>
+    </header>
+    <main>
+        <div>
+            <h2>Criando um objeto</h2>
+            <h2>Propriedades</h2>
+                <ul>
+                    <li>Propriedades com mais de uma palavra - não é muito utilizado, pois se prefere o <strong>camelCase</strong></li>
+                    <li>Evitar acentuação gráfica, por estar tudo em inglês, no geral</li>
+                </ul>
+            <h2>Tipos de dados</h2>
+                <ul>
+                    <li>Todos os tipos, inclusive arrays.</li>
+                </ul>
+            <h2>Acessando propriedades por varíaveis</h2>
+                <p>
+                    <pre>
+                        <span>
+                            let cavalo = {
+                                patas: 4,
+                                "está domesticado": false,
+                                estaDomesticado: false,
+                                n: 'agluma coisa'
+                            }
+                            const n = 'patas'
+                            const m = 'está domesticado'
+                            console.log(cavalo[n])
+                            console.log(cavalo.n) //Esse é uma propriedade
+                            console.log(cavalo['patas'])
+                            console.log(cavalo[m])
+                        </span>
+                    </pre>
+                </p>
+            <h2>Criando métodos</h2>
+                <p>Os métodos são ações dos objetos, sem limite, podendo resgatar propriedades ou modificar as mesmas.</p>
+                <p>
+                    <pre>
+                        <span>
+                            let pessoa = {
+                                nome: "Wagner",
+                                falar: function() {
+                                    console.log("Oi")
+                                }
+                            }
+                            console.log(pessoa)
+                            pessoa.falar()
+                        </span>
+                    </pre>
+                </p>
+            <h2>Objeto dentro de objetos</h2>
+                <p>Por exemplo, um array associativo</p>
+                <p>
+                    <pre>
+                        <span>
+                            let pessoa = {
+                                nome: "Wagner",
+                                idade: 29,
+                                falar() {
+                                    console.log("Oi")
+                                },
+                                aniversario(){
+                                    this.idade+=1
+                                },
+                                dizerIdade(){
+                                    console.log("A minha idade é "+ this.idade)
+                                },
+                                podeDirigir(){
+                                    if(this.idade>=18){
+                                        console.log("Pode dirigir")
+                                    } else {
+                                        console.log("Ainda não pode dirigir")
+                                    }
+                                },
+                                caracteristicas: {
+                                    cnh: true,
+                                    carteira: ['dinheiro', 'documento', 'moeda']
+                                }
+                            }
+                            console.log(pessoa.caracteristicas)
+                            console.log(pessoa.caracteristicas.carteira[2])
+                        </span>
+                    </pre>
+                </p>
+            <h2>Criar propriedades e métodos para um objeto existente</h2>
+                <p>
+                    <pre>
+                        <span>
+                            let carro = {
+                                portas: 4,
+                                cor: "Vermelha",
+                                opcionais: ["teto solar","blindagem","ar condicionado"
+                                ],
+                                requisito: true
+                            }
+                            carro.tipo = 'SUV'
+                            console.log(carro.tipo)
+                            if(carro.tipo=='SUV'){
+                                carro.tetosolar=true;
+                            }
+                            console.log(carro)
+                            carro.acelerar = function(){
+                                console.log('Acelenrando...')
+                            }
+                            carro.acelerar()
+                        </span>
+                    </pre>
+                </p>
+            <h2>Deletar propriedade</h2>
+                <p>Use a propriedade 'delete', mas essa prática é equivocada, por criar comportamentos anormais, prejudicando a manutenção do código</p>
+                <p>
+                    <pre>
+                        <span>delete carro.ligar</span>
+                    </pre>
+                </p>
+            <h2>This</h2>
+                <p>A palavra <strong>this</strong> é utilizada para manter propriedades e métodos</p>
+            <h2>Constructor</h2>
+                <p>A constructor aceita parâmetros para o objeto e reaproveita o código</p>
+                <p>
+                    <pre>
+                        <span>
+                            let ninja2 = {
+                                classe: 'profissional',
+                                arma: 'kunai',
+                                atirarArma (){
+                                    console.log("Atirou a "+this.arma)
+                                }
+                            }
+                            
+                            ninja2.atirarArma()
+                            
+                            function Ninja(nome,arma){
+                                this.nome=nome;
+                                this.arma=arma;
+                                this.atirarArma=function(){
+                                    console.log("Atirou a "+this.arma)
+                                }
+                            }
+                            
+                            let Ninja0 = new Ninja('Naruto','shuriken');
+                            console.log(Ninja0.nome)
+                            let Ninja1 = new Ninja('Sasuke','kunai')
+                            console.log(Ninja1.nome)
+                            ninja2.atirarArma()
+                        </span>
+                    </pre>
+                </p>
+            <h2>Funções que retornam objetos</h2>
+                <p>Semelhante ao constructor, mas sem necessidade de utilizar <strong>new</strong>, por que a função utiliza <strong>return</strong></p>
+            <h2>Objeto Global</h2>
+                <p>O this quando é usado fora de função ou propriedades fará referência ao window </p>
+                <article>O let e const não inserem no escopo windows. Por outro lado, function e var aparecem na variável global.</article>
+            <h2></h2>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>
