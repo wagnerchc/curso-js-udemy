@@ -25,7 +25,7 @@
                     <li>Todos os tipos, inclusive arrays.</li>
                 </ul>
             <h2>Acessando propriedades por varíaveis</h2>
-                <p>
+                <p><u>Exemplo:</u>
                     <pre>
                         <span>
                             let cavalo = {
@@ -45,7 +45,7 @@
                 </p>
             <h2>Criando métodos</h2>
                 <p>Os métodos são ações dos objetos, sem limite, podendo resgatar propriedades ou modificar as mesmas.</p>
-                <p>
+                <p><u>Exemplo:</u>
                     <pre>
                         <span>
                             let pessoa = {
@@ -61,7 +61,7 @@
                 </p>
             <h2>Objeto dentro de objetos</h2>
                 <p>Por exemplo, um array associativo</p>
-                <p>
+                <p><u>Exemplo:</u>
                     <pre>
                         <span>
                             let pessoa = {
@@ -94,7 +94,7 @@
                     </pre>
                 </p>
             <h2>Criar propriedades e métodos para um objeto existente</h2>
-                <p>
+                <p><u>Exemplo:</u>
                     <pre>
                         <span>
                             let carro = {
@@ -119,7 +119,7 @@
                 </p>
             <h2>Deletar propriedade</h2>
                 <p>Use a propriedade 'delete', mas essa prática é equivocada, por criar comportamentos anormais, prejudicando a manutenção do código</p>
-                <p>
+                <p><u>Exemplo:</u>
                     <pre>
                         <span>delete carro.ligar</span>
                     </pre>
@@ -128,7 +128,8 @@
                 <p>A palavra <strong>this</strong> é utilizada para manter propriedades e métodos</p>
             <h2>Constructor</h2>
                 <p>A constructor aceita parâmetros para o objeto e reaproveita o código</p>
-                <p>
+                <p>A constructor é uma propriedade sempre criada junto com o objeto</p>
+                <p><u>Exemplo:</u>
                     <pre>
                         <span>
                             let ninja2 = {
@@ -158,11 +159,88 @@
                     </pre>
                 </p>
             <h2>Funções que retornam objetos</h2>
-                <p>Semelhante ao constructor, mas sem necessidade de utilizar <strong>new</strong>, por que a função utiliza <strong>return</strong></p>
+                <p>Semelhante ao constructor, mas sem necessidade de utilizar <strong>new</strong>, porque a função utiliza <strong>return</strong></p>
             <h2>Objeto Global</h2>
                 <p>O this quando é usado fora de função ou propriedades fará referência ao window </p>
                 <article>O let e const não inserem no escopo windows. Por outro lado, function e var aparecem na variável global.</article>
-            <h2></h2>
+            <h2>Instanceof</h2>
+                <p>Para descobrir quem é o pai do objeto, usar <strong>instanceof</strong></p>
+            <h2>Referência de objeto</h2>
+                <p>Ao atribuir uma variável a outra variável, ocorrerá a passagem de referência e, consequentemente, a alteração da segunda variável terá impacto na primeira, por conta da passagem dela como referência</p>
+                <p><u>Exemplo:</u>
+                    <pre>
+                        <span>
+                            let obj = {
+                                numero: 1,
+                            }
+                            
+                            console.log(obj.numero)
+                            
+                            let copia = obj
+                            
+                            console.log(copia.numero)
+                            
+                            copia.numero=5
+                            
+                            console.log(obj.numero)
+                            console.log(copia.numero)
+                        </span>
+                    </pre>
+                </p>
+            <h2>Comparando objetos</h2>
+                <p>Só é possível ter objetos iguais, a partir da comparação quando são referenciados dentro de outra varíavel, porque objetos criados pelo mesmo construtor, sempre serão diferentes</p>
+            <h2>Object literals</h2>
+                <p>ES6 (ECRASCRIPT2015) permite criar objetos mais rapidamente, porque é possível utilizar os nomes das variáveis como nomes das propriedades</p>
+                <p>Também não é necessário declarar <strong>function:</strong>, por onta do ES6, igualmente, ocorre em outras linguagens orientadas ao objeto</p>
+                <p>Também é possível criar propriedades com variáveis e retorno de funções, visando escrever menos código</p>
+            <h2>Atributos das propriedades</h2>
+                <p>Para saber se a propriedade é modificável, usar <strong>.getOwnPropertyDescriptor(objeto,'propriedade')</strong></p>
+                <p><u>Exemplo:</u>
+                    <pre>
+                        <span>
+                            let novaPessoaBonita={
+                                nomeDaPessoa:'Wagner'
+                            }
+                            
+                            console.log(Object.getOwnPropertyDescriptor(novaPessoaBonita,'nomeDaPessoa'))
+
+                            {value: 'Wagner', writable: true, enumerable: true, configurable: true}
+                            configurable: true
+                            enumerable: true
+                            value: "Wagner"
+                            writable: true
+                            [[Prototype]]: Object
+                        </span>
+                    </pre>
+                </p>
+            <h2>Copiando propriedades</h2>
+                <p>O método <strong>.assign(objeto-filho,objeto-pai)</strong> faz com que o objeto filho herde os métodos e as propriedades do objeto pai.</p>
+                <p>O objeto filho ao copiar os atributos e os métodos do objeto pai, se houver mesma assinatura, os atributos e métodos do pai prevaleceram sobre o filho</p>
+                <p><u>Exemplo:</u>
+                    <pre>
+                        <span>
+                            let novaPessoaBonita={
+                                nomeDaPessoa:'Wagner',
+                                getNomeDaPessoa(){
+                                    console.log("Esse é o nome do objeto pai "+this.nomeDaPessoa)
+                                }
+                            }
+                            console.log(Object.getOwnPropertyDescriptor(novaPessoaBonita,'nomeDaPessoa'))
+                            let novaPessoaBonita2={
+                                idade: 99,
+                                nomeDaPessoa:'Teste'
+                            }
+                            Object.assign(novaPessoaBonita2,novaPessoaBonita)
+                            console.log(novaPessoaBonita2)
+                            novaPessoaBonita2.getNomeDaPessoa()
+                            novaPessoaBonita2.nomeDaPessoa='Aline'
+                            console.log(novaPessoaBonita2.nomeDaPessoa)
+                            novaPessoaBonita2.nomeDaPessoa='Wagner'
+                            console.log(novaPessoaBonita2.nomeDaPessoa===novaPessoaBonita.nomeDaPessoa) // esse compara um atributo/comportamento do objeto, por isso podem ser idênticos
+                            console.log(novaPessoaBonita2===novaPessoaBonita) //esse compara o objeto como um todo, por isso é falso
+                        </span>
+                    </pre>
+                </p>
         </div>
     </main>
     <footer>

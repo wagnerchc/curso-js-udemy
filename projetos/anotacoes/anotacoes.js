@@ -199,3 +199,130 @@ console.log(bmw.modeloDoCarro)
 
 console.log(window)
 
+function criarArvore(especie, temFruto){
+    return{
+        especie: especie,
+        temFruto: temFruto
+    }
+}
+
+let laranjeira = criarArvore('Laranjeira', true)
+console.log(laranjeira)
+console.log(laranjeira.constructor)
+
+function heroi(nome, classe){
+    this.nome=nome;
+    this.classe=classe;
+}
+
+let jaspion=new heroi('Jaspion','robo')
+console.log(jaspion)
+console.log(jaspion.constructor)
+
+console.log(laranjeira instanceof criarArvore)
+console.log(laranjeira instanceof Object)
+
+console.log(jaspion instanceof heroi)
+
+let arr=[
+
+]
+
+console.log(arr instanceof Array)
+
+let obj = {
+    numero: 1,
+}
+
+console.log(obj.numero)
+
+let copia = obj
+
+console.log(copia.numero)
+
+copia.numero=5
+
+console.log(obj.numero)
+console.log(copia.numero)
+
+function ninjaNovo(nome,arma){
+    this.nome=nome;
+    this.arma=arma;
+}
+
+const naruto=new ninjaNovo('Naruto','shuriken')
+const rocklee=new ninjaNovo('Rock Lee','punhos')
+const cloneDoNaruto=new ninjaNovo('Naruto','shuriken')
+const cloneVerdadeiroDoNaturo = naruto
+
+console.log(naruto===rocklee)
+console.log(naruto===cloneDoNaruto)
+console.log(naruto===cloneVerdadeiroDoNaturo)
+console.log(naruto.nome===cloneDoNaruto.nome)
+
+let rodas=4
+let portas=4
+let aro=20
+let tetoSolar=true
+
+let t="tipo_de_"
+
+let carroNovo={
+    rodas,
+    portas,
+    aro,
+    tetoSolar,
+    bancoDeCouto: true,
+    [t+"carro"]: "Sedan",
+    ligar(){
+        console.log("O carro ligou")
+    },
+    desligar: function(){
+        console.log("Carro desligado")
+    }
+}
+
+let barco={
+    [t+"barco"]: "Lancha"
+}
+
+let aviao={
+    [t+"aviao"]: "Boeing"
+}
+
+console.log(carroNovo)
+carroNovo.ligar()
+carroNovo.desligar()
+console.log(carroNovo.tipo_de_carro)
+console.log(barco.tipo_de_barco)
+console.log(aviao.tipo_de_aviao)
+
+let novaPessoaBonita={
+    nomeDaPessoa:'Wagner',
+    getNomeDaPessoa(){
+        console.log("Esse é o nome do objeto pai "+this.nomeDaPessoa)
+    }
+}
+
+console.log(Object.getOwnPropertyDescriptor(novaPessoaBonita,'nomeDaPessoa'))
+
+let novaPessoaBonita2={
+    idade: 99,
+    nomeDaPessoa:'Teste'
+}
+
+Object.assign(novaPessoaBonita2,novaPessoaBonita)
+
+console.log(novaPessoaBonita2)
+
+novaPessoaBonita2.getNomeDaPessoa()
+
+novaPessoaBonita2.nomeDaPessoa='Aline'
+
+console.log(novaPessoaBonita2.nomeDaPessoa)
+
+novaPessoaBonita2.nomeDaPessoa='Wagner'
+
+console.log(novaPessoaBonita2.nomeDaPessoa===novaPessoaBonita.nomeDaPessoa) // esse compara um atributo/comportamento do objeto, por isso podem ser idênticos
+
+console.log(novaPessoaBonita2===novaPessoaBonita) //esse compara o objeto como um todo, por isso é falso
