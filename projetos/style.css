@@ -3,26 +3,29 @@
     border: 0px;
     margin: 0px;
     /* Color Theme Swatches in Hex */
-    --color1: #8C8627;
-    --color2: #736355;
-    --color3: #A69586;
-    --color4: #D9CCC5;
-    --color5: #F2F0F0;
+    --color1: #03A678;
+    --color2: #027353;
+    --color3: #F2AF5C;
+    --color4: #F2762E;
+    --color5: #F23D3D;
     --color6: #000000;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     width: 100%;
-    background-color: #ffcdf8;
+    background-color: var(--color1);
+    font-size: 1rem;
+    word-wrap: break-word;
 }
 body{
-    background-color: var(--color5);
+    background-color: white;
     color: var(--color6);
     width: 50%;
     margin: auto;
+    margin-top: 10px;
     border-radius: 5px;
     padding: 5px;
 }
 h1{
-    text-align: left;
+    text-align: center;
 }
 h2{
     text-align: left;
@@ -30,4 +33,11 @@ h2{
 span{
     font-size: 0.8rem;
     word-break: break-word;
+}
+p{
+    font-size: 0.7rem;
+}
+
+#res{
+    font-size: 0.7rem;
 }
