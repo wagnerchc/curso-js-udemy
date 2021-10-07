@@ -326,3 +326,64 @@ novaPessoaBonita2.nomeDaPessoa='Wagner'
 console.log(novaPessoaBonita2.nomeDaPessoa===novaPessoaBonita.nomeDaPessoa) // esse compara um atributo/comportamento do objeto, por isso podem ser idênticos
 
 console.log(novaPessoaBonita2===novaPessoaBonita) //esse compara o objeto como um todo, por isso é falso
+
+let obj1={
+    a:1
+}
+let obj2={
+    a:1
+}
+console.log(Object.is(obj1,obj2))//falso
+console.log(Object.is(NaN,NaN))//verdadeiro
+console.log(NaN===NaN)//falso
+console.log(Object.is(+0,-0))//falso
+console.log(+0===-0)//verdadeiro
+
+let testeObj3 = obj2
+
+console.log(Object.is(testeObj3,obj2))//verdadeiro
+console.log(testeObj3===obj2)//verdadeiro
+
+let carroNovoHoje={
+    portasFacil:5,
+    aroFacil:20.5,
+    tetoSolarFacil:true,
+    bancoFacil:'couro sintético'
+}
+
+let{portasFacil,aroFacil,tetoSolarFacil,bancoFacil}=carroNovoHoje
+
+console.log(portasFacil)
+console.log(aroFacil)
+console.log(tetoSolarFacil)
+console.log(bancoFacil)
+
+portasFacil=3
+
+console.log(portasFacil)
+
+let trator={
+    portasTrator:2,
+    aroTrator:180,
+    tetoSolarTrator:true,
+    bancoTrator:'couro'
+}
+
+console.log(trator.portasTrator)
+
+let portasTrator=1
+
+console.log(portasTrator)
+
+//({portasTrator}=trator)
+
+console.log(trator.portasTrator)
+
+let destructuringFrutas=['banana','laranja','maça']
+let [banana,l1,m1]=destructuringFrutas
+console.log(m1)
+
+let destructuringFrutasRest=['banana','laranja','maça',54,86,49,37,55,01,0001,18530]
+let [frutas1,...outrasFrutas]=destructuringFrutasRest
+console.log(frutas1)
+console.log(outrasFrutas)

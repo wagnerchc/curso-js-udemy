@@ -29,4 +29,5 @@ h2{
 }
 span{
     font-size: 0.8rem;
+    word-break: break-word;
 }
