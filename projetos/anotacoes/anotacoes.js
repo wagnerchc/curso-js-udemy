@@ -606,3 +606,35 @@ try {
     console.log(`${e.name}: ${e.message}`)
 }
 
+//110 - Propriedade prototype
+function abc() {
+    console.log('teste');
+}
+abc()
+console.log(abc.prototype)
+console.log(typeof abc.prototype)
+abc.prototype.teste=1
+console.log(abc.prototype.teste)
+
+//111 - Adicionando pros e métodos com prototypes
+function CarroAula (marca,preco){
+    this.marca=marca;
+    this.preco=preco;
+}
+let carroBmw = new CarroAula('BMW',100000)
+console.log(carroBmw)
+CarroAula.prototype.rodas=4
+console.log(carroBmw.rodas)
+CarroAula.prototype.ligar=function(){
+    console.log("O carro ligou")
+}
+carroBmw.ligar()
+
+//112 - Adicionar múltipos pros e métodos - prejudicando a manutenção do código
+CarroAula.prototype={
+    banco:'couro',
+    ligarPiscaEsquerdo(){
+        console.log("Ligou pisca do lado esquerdo");
+    }
+}
+console.log(carroBmw.banco)
