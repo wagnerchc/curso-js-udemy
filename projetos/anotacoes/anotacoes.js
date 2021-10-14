@@ -387,3 +387,222 @@ let destructuringFrutasRest=['banana','laranja','maça',54,86,49,37,55,01,0001,1
 let [frutas1,...outrasFrutas]=destructuringFrutasRest
 console.log(frutas1)
 console.log(outrasFrutas)
+
+//Aula 74 - Object()
+
+let o1 = {}
+let o2 = new Object()
+console.log(o1)
+console.log(o2)
+
+o1.nome="JavaScript"
+o2.nome="HTML5"
+
+console.log(o1.valueOf())
+console.log(o2.valueOf())
+
+console.log(o1.toString())
+console.log(o2.toString())
+
+//Aula75 - Array
+
+let a75 = [0,1,2]
+let b75 = new Array(3,4,5)
+
+console.log(a75,b75)
+console.log(a75.toString())
+console.log(b75.toString())
+console.log(a75 instanceof Array)
+console.log(b75 instanceof Object)
+console.log(Array instanceof Object)
+
+//76 - Array (continuação)
+
+console.log(a75.length)
+console.log(b75.length)
+
+a75.push(4)
+b75.push(5)
+console.log(a75,b75)
+
+a75.pop()
+b75.pop()
+console.log(a75,b75)
+
+//77 - Function
+
+function testeFuncao(a){
+    return a;
+}
+console.log(testeFuncao('oi'))
+
+//Não é aconselhável fazer função com new
+teste2=new Function(
+    'a',
+    'return arguments'
+)
+console.log(teste2('testando'))
+
+//78 - Function (continuação) - número de argumentos de uma função
+
+function testeFuncao2(a,b){
+    return a + b
+}
+
+console.log(testeFuncao2.length) // resultará em: 2, porque tem dois argumentos
+console.log(testeFuncao2.toString())
+console.log(testeFuncao2 instanceof Function)
+console.log(Function instanceof Object)
+
+//79 - Function (continuação) - call e apply
+//call - pega métodos empregados de objetos
+//apply - todos os parâmetros são transformados em arrays
+
+let aNome={
+    nome:"JavaScript",
+    dizerNomeSalvo(){
+        console.log(`O nome deste objeto é ${this.nome}`)
+    }
+}
+
+let bNome={
+    nome:"HTML5"
+}
+
+aNome.dizerNomeSalvo()
+aNome.dizerNomeSalvo.call(bNome)
+
+//80 - Boolean (true e false) .valueOf()
+
+let aBoolean = true
+let bBoolean = new Boolean(false)
+console.log(aBoolean)
+console.log(bBoolean)
+console.log(bBoolean.valueOf())
+console.log(aBoolean instanceof Boolean) // boolean !=Boolean
+console.log(aBoolean.valueOf())
+
+//81 - Number
+
+let aNumber = 20
+let bNumber = new Number(20)
+
+console.log(aNumber)
+console.log(bNumber)
+console.log(aNumber==bNumber.valueOf)
+
+let cNumber = 12.462
+
+console.log(Number.parseInt(cNumber))
+console.log(parseInt(cNumber))
+
+let dNumber = '12.32494162'
+console.log(Number.parseFloat(dNumber))
+console.log(parseFloat(dNumber))
+
+//82 - Number (continuacao) - MAX_VALUE ou MIN_VALUR ou NaN
+
+console.log(Number)
+console.log(Number.MAX_VALUE)
+console.log(Number.MIN_VALUE)
+console.log(Number.NaN)
+console.log(Number.MAX_SAFE_INTEGER)
+console.log(Number.MIN_SAFE_INTEGER)
+console.log(Number.NEGATIVE_INFINITY)
+
+//83 - Number (continuacao)
+// toFixed() - para arredondar
+// toExponencial() - para 
+// toPrecision() - para imprimir somente a quantidade de números indicados
+
+console.log(cNumber.toFixed(2))
+console.log(cNumber.toPrecision(3))
+console.log(aNumber.toExponential())
+
+//84 - String
+//.length - número de caracteres
+//.length[] - acessar os caracteres como se fosse um array
+
+let s1 = new String('teste')
+let s2 = 'TESTANDO'
+
+console.log(s1.length)
+console.log(s2.length)
+
+console.log(s1[2])
+console.log(s2[6])
+
+//85 - String (continuação)
+//.toUpperCase()
+//.toLowerCase()
+//.charAt()
+//.indezOf()
+
+console.log(s1.toUpperCase())
+console.log(s2.toLowerCase())
+console.log(s2.charAt(5))
+console.log(s2[5])
+console.log(s2.indexOf('D')) //case sensitive
+
+//86 - String (continuação)
+//.slice(i,f) - exclui caracteres de início e fim
+//.substring(i,f) - retorna o que foi indicado no início e fim
+//.split("") - explode a string em array
+
+let frase = "Mussum Ipsum, cacilds vidis litro abertis. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis. Manduma pindureta quium dia nois paga. Casamentiss faiz malandris se pirulitá. Quem num gosta di mim que vai caçá sua turmis!"
+
+console.log(frase.slice(2,6))
+console.log(frase.split(" "))
+console.log(frase.substring(2,6))
+
+//87 - Math
+//Math.PI
+//Math.LN2
+//Math.random() - número aleatório
+
+console.log(Math.PI)
+console.log(Math.LN2)//logaritmo natural de 2
+console.log(Math.LN10)//logaritmo natural de 10
+console.log(Math.random())//número aleatório de 0 a 1
+console.log(Math.floor(Math.random()*11)) // 0 a 10
+
+//88 - Math (continuação)
+//Math.floor - arredonda para baixo
+//Math.ceil - arredonda para cima
+//Math.pow - potência
+
+console.log(Math.floor(12.384))
+console.log(Math.ceil(12.384))
+console.log(Math.pow(2,2))
+console.log(Math.pow(12,5))
+console.log(Math.sqrt(16))
+
+//89 - Date
+//Date()
+//Date(yyyy,mm,dd)
+
+console.log(new Date())
+console.log(new Date(2022,10,21))
+console.log(new Date(01578900050000))
+
+//90 - Date (continuação)
+let dataTeste = new Date()
+console.log(dataTeste.setMonth(1))
+console.log(new Date(dataTeste.setMonth(11)))
+console.log(Date.parse('Apr 22, 2019'))
+console.log(Date.now())
+console.log(new Date(Date.now()))
+
+//91 - RegExp - expressões regulares
+let palavra = new RegExp(/aS/)
+console.log(palavra.test("Bola"))
+console.log(palavra.test("JavaScript"))
+console.log(palavra.test("HMTL5"))
+
+//92 - Error - tratar erros, por que é um objeto
+try {
+    throw new Error("Deu um problema no código")
+} catch(e) {
+    console.log(`${e.name}: ${e.message}`)
+}
+

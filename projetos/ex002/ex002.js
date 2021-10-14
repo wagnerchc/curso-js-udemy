@@ -6,7 +6,7 @@ let pessoa={
 }
 
 function resultado(){
-    let res=document.getElementById('res')   
+    let res=document.getElementById('res')
     res.innerHTML =``
     pessoa.exibirNome()
 }

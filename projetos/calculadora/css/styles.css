@@ -1,0 +1,205 @@
+:root{
+    padding: 0px;
+    border: 0px;
+    margin: 0px;
+    --color1: #03A678;
+    --color2: #027353;
+    --color3: #F2AF5C;
+    --color4: #F2762E;
+    --color5: #F23D3D;
+    --color6: #000000;
+    font-family:'Montserrat', sans-serif;
+    width: 100%;
+    background-color: var(--color1);
+    font-size: 1rem;
+    word-wrap: break-word;
+}
+
+@media only screen and (min-width: 501px){
+    body{
+        background-color: var(--cor3);
+        color: var(--color6);
+        width: 50%;
+        margin: auto;
+        margin-top: 10px;
+        border-radius: 5px;
+        padding: 5px;
+    }
+
+    h1{
+        text-align: center;
+        font-size: 1.4rem;
+    }
+
+    h2{
+        text-align: left;
+        font-size: 1.2rem;
+        margin: 30px 0;
+    }
+
+    /*Calculadora*/
+    #calculator{
+        background-color: var(--color3);
+        padding-top: 30px;
+        padding-bottom: 50px;
+    }
+
+    #screen-container{
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 30px;
+        padding: 10px;
+        width: 80%;
+        height: 70px;
+        border: 1px solid var(--color1);
+        text-align: right;
+        word-wrap: break-word;
+        box-sizing: border-box;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    #upper-number, #result-number {
+        float: right;
+        color: var(--color6);
+    }
+
+    #result-number{
+        font-weight: bold;
+        margin-top: 5px;
+        font-size: 22px;
+        clear: both; /*Limpara o float*/
+    }
+
+    .btn-container{
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    .btn{
+        width: 20%;
+        height: 25%;
+        margin: 0 7.5px;
+        line-height: 50px;
+        text-align: center;
+        color: var(--color1);
+        background-color: var(--color6);
+        font-weight: bold;
+        font-size: 1,2rem;
+        display: inline-block;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    .btn:hover{
+        background-color: var(--color1);
+        color: var(--color6);
+    }
+
+    #ac-btn, #division-btn, #zero-btn, #equals-btn{
+        width: 45%;
+    }
+
+    #ac-btn, #division-btn, #multiplication-btn, #minus-btn, #plus-btn, #zero-btn, #equals-btn{
+        font-weight: normal;
+        font-size: 1.3rem;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    body{
+        background-color: var(--cor3);
+        color: var(--color6);
+        width: 90%;
+        margin: auto;
+        margin-top: 10px;
+        border-radius: 5px;
+        padding: 5px;
+    }
+
+    h1{
+        text-align: center;
+        font-size: 1.4rem;
+    }
+
+    h2{
+        text-align: left;
+        font-size: 1.2rem;
+        margin: 30px 0;
+    }
+
+    /*Calculadora*/
+    #calculator{
+        background-color: var(--color3);
+        padding-top: 30px;
+        padding-bottom: 50px;
+    }
+
+    #screen-container{
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 15px;
+        padding: 10px;
+        width: 85%;
+        height: 70px;
+        border: 1px solid var(--color1);
+        text-align: right;
+        word-wrap: break-word;
+        box-sizing: border-box;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    #upper-number, #result-number {
+        float: right;
+        color: var(--color6);
+    }
+
+    #result-number{
+        font-weight: bold;
+        margin-top: 7px;
+        font-size: 1rem;
+        clear: both; /*Limpara o float*/
+    }
+
+    .btn-container{
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    .btn{
+        width: 15%;
+        height: 15%;
+        margin: 0 7.5px;
+        line-height: 35px;
+        text-align: center;
+        color: var(--color1);
+        background-color: var(--color6);
+        font-weight: bold;
+        font-size: 1,2rem;
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    .btn:hover{
+        background-color: var(--color1);
+        color: var(--color6);
+    }
+
+    #ac-btn, #division-btn, #zero-btn, #equals-btn{
+        width: 37.3%;
+    }
+
+    #ac-btn, #division-btn, #multiplication-btn, #minus-btn, #plus-btn, #zero-btn, #equals-btn{
+        font-weight: normal;
+        font-size: 1rem;
+    }
+}
