@@ -1,3 +1,6 @@
+/*Tipos de dados e propriedades
+- Todos os tipos, inclusive arrays.*/
+
 let maquina = {
     material: "Aço inox",
     equipamentos: ['motor', 'freio', 'esteira', 'cilindro'],

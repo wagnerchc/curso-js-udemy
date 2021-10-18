@@ -1,3 +1,6 @@
+/*Propriedade do objeto</p>
+- Propriedades com mais de uma palavra - não é muito utilizado, pois se prefere o camelCase
+- Evitar acentuação gráfica, por estar tudo em inglês, no geral*/
 let carro = {
     portas: 4,
     cor: "Vermelha"

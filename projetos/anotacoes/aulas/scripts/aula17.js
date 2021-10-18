@@ -1,3 +1,5 @@
+//Criando um objeto
+
 let carro = {
     portas: 4,
     cor: "Vermelha"
