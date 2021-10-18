@@ -108,6 +108,9 @@
         font-weight: normal;
         font-size: 1.3rem;
     }
+    #teste{
+        background-color: var(--color5);
+    }
 }
 
 @media only screen and (max-width: 500px){
