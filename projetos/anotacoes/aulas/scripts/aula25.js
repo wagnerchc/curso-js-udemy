@@ -1,3 +1,4 @@
+/*Propriedades e métodos em objetos já criados*/
 let carro = {
     tipo: "SUV",
 }

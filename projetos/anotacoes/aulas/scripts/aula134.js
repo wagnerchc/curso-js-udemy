@@ -1,3 +1,4 @@
+/*Resolvendo o problema da cópia de arrays*/
 function objectClone(o,stuff) {
     let n;
     function F (){};

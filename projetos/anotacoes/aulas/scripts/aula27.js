@@ -1,3 +1,5 @@
+/*Como utilizar o this nos objetos
+- A palavra this é utilizada para manter propriedades e métodos*/
 let ninja = {
     classe: 'profissional',
     arma: 'shuriken',

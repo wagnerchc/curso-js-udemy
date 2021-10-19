@@ -1,3 +1,4 @@
+/*Isolando a herança em uma função*/
 function extend(Filho,Pai){
     let F = function(){};
     Filho.prototype=Pai.prototype;

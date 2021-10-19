@@ -1,3 +1,4 @@
+/*Acessando propriedades por variáveis*/
 let cavalo = {
     patas: 4,
     "está domesticado": false,

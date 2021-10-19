@@ -1,3 +1,5 @@
+/*Outro problema ao copiar por loop
+- Os arrays do pai são afetados pelos arrays do filho, por passagem de referência*/
 function extend(Filho,Pai){
     let paiProto = Pai.prototype;
     let filhoProto = Filho.prototype;

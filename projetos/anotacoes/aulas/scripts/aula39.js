@@ -1,3 +1,6 @@
+/*Copiando propriedades
+- O método <strong>.assign(objeto-filho,objeto-pai)</strong> faz com que o objeto filho herde os métodos e as propriedades do objeto pai.</p>
+<p>O objeto filho ao copiar os atributos e os métodos do objeto pai, se houver mesma assinatura, os atributos e métodos do pai prevaleceram sobre o filho*/
 let novaPessoaBonita={
     nomeDaPessoa:'Wagner',
     getNomeDaPessoa(){

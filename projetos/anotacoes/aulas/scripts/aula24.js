@@ -1,3 +1,5 @@
+/*Objetos dentro de objetos
+- Por exemplo, um array associativo*/
 let pessoa = {
     nome: "Wagner",
     idade: 29,

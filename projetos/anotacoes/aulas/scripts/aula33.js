@@ -1,3 +1,5 @@
+/*Referência de objeto
+- Ao atribuir uma variável a outra variável, ocorrerá a passagem de referência e, consequentemente, a alteração da segunda variável terá impacto na primeira, por conta da passagem dela como referência*/
 let obj = {
     numero: 1,
 }

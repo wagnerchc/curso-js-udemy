@@ -1,3 +1,7 @@
+/*Object literals
+- ES6 (ECRASCRIPT2015) permite criar objetos mais rapidamente, porque é possível utilizar os nomes das variáveis como nomes das propriedades
+- Também não é necessário declarar function:, por onta do ES6, igualmente, ocorre em outras linguagens orientadas ao objeto
+- Também é possível criar propriedades com variáveis e retorno de funções, visando escrever menos código*/
 let rodas=4
 let portas=4
 let aro=20

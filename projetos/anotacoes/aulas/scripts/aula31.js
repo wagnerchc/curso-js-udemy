@@ -1,3 +1,4 @@
+/*A propriedade constructor*/
 function criarArvore(especie, temFruto){
     return{
         especie: especie,

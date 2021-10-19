@@ -1,3 +1,7 @@
+/*Copiando propriedades:
+- Copiar as propriedades por um loop e realizar herança
+- Propriedade 'uber' para acessar o objeto pai
+- Perde em performance, porque replicar as propriedades e métodos*/
 function extend(Filho,Pai){
     let paiProto = Pai.prototype;
     let filhoProto = Filho.prototype;

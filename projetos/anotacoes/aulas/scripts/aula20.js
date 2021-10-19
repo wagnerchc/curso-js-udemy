@@ -1,3 +1,4 @@
+/*Propriedades com mais de uma palavra*/
 let cavalo = {
     patas: 4,
     "está domesticado": false,

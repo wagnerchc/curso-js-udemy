@@ -1,3 +1,5 @@
+/*Function que retorna objeto
+- Semelhante ao constructor, mas sem necessidade de utilizar new, porque a função utiliza return*/
 function criarCarro(modelo, portas, aro, tetoSolar) {
     return{
         modeloDoCarro: modelo,

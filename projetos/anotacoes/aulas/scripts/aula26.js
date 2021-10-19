@@ -1,3 +1,5 @@
+/*Deletando propriedades e métodos
+- Use a propriedade 'delete', mas essa prática é equivocada, por criar comportamentos anormais, prejudicando a manutenção do código*/
 let carro = {
     tipo: "SUV",
     ligar (){

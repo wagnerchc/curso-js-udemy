@@ -1,3 +1,6 @@
+/*Constructor function
+- A constructor aceita parâmetros para o objeto e reaproveita o código
+- A constructor é uma propriedade sempre criada junto com o objeto*/
 function Ninja(nome,arma){
     this.nome=nome;
     this.arma=arma;

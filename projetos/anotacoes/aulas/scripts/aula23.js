@@ -1,3 +1,4 @@
+/*Mais sobre métodos*/
 let pessoa = {
     nome: "Wagner",
     idade: 29,

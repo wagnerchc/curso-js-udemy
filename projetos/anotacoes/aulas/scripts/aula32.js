@@ -1,3 +1,5 @@
+/*O operador instanceof
+- Para descobrir quem é o pai do objeto, usar instanceof*/
 function criarArvore(especie, temFruto){
     return{
         especie: especie,

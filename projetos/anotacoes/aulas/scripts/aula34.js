@@ -1,3 +1,5 @@
+/*Comparando objetos
+- Só é possível ter objetos iguais, a partir da comparação quando são referenciados dentro de outra varíavel, porque objetos criados pelo mesmo construtor, sempre serão diferentes*/
 function ninjaNovo(nome,arma){
     this.nome=nome;
     this.arma=arma;

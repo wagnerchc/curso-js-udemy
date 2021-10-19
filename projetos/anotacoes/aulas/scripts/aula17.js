@@ -1,4 +1,4 @@
-//Criando um objeto
+/*Criando um objeto*/
 
 let carro = {
     portas: 4,

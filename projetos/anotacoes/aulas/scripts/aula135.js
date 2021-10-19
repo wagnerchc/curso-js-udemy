@@ -1,3 +1,6 @@
+/*Herança múltipla
+- Difícil manutenção
+- Melhor usar o prototype chain*/
 function multi(){
     let n = {}, stuff, j = 0, len = arguments.length;
     for(j = 0; j < len; j++){
