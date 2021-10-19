@@ -1,4 +1,4 @@
-//120 - Fazendo upgrade nos prototypes, adicionando métodos
+/*120 - Fazendo upgrade nos prototypes, adicionando métodos*/
 
 Array.prototype.checkLength = function(){
     return this.length;
@@ -16,7 +16,7 @@ console.log(arrayB.checkLength())
 console.log(arrayA.somaDoisPrimeiros())
 console.log(arrayB.somaDoisPrimeiros())
 
-//121 - Porque não é uma excelente ideia usar funções dentro do prototype
+/*121 - Porque não é uma excelente ideia usar funções dentro do prototype*/
 
 if(typeof Array.prototype.somaTodosValores !== 'function'){
     Array.prototype.somaTodosValores=function(){

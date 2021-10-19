@@ -1,4 +1,4 @@
-//129 - Mudança em cadeira do conteúdo das props e métodos
+/*129 - Mudança em cadeira do conteúdo das props e métodos*/
 
 function aaa (){
     this.mensagem=function(){

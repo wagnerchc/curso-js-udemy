@@ -1,0 +1,148 @@
+:root{
+    padding: 0px;
+    border: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    --color1: #03A678;
+    --color2: #027353;
+    --color3: #F2AF5C;
+    --color4: #F2762E;
+    --color5: #F23D3D;
+    --color6: #000000;
+    --color7: #dadada;
+    width: 100%;
+    font-family:'Montserrat', sans-serif;
+    background-color: var(--color1);
+    font-size: 1rem;
+    word-wrap: break-word;
+}
+
+body{
+    background-color: var(--cor3);
+    color: var(--color6);
+    width: 80%;
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+main{
+    background-color: var(--color3);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+h1{
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+h2{
+    margin-bottom: 25px;
+}
+
+#main-container{
+    position: relative;
+    padding: 30px;
+}
+
+#add-container{
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--color2);
+}
+
+#add-container input, #add-container button{
+    padding: 10px;
+    background-color: var(--color7);
+    border-radius: 3px;
+    border: 3px;
+    width: 75%;
+    display: inline-block;
+}
+
+#add-container button{
+    width:18%;
+    cursor: pointer;
+    transition: .5x;
+}
+
+#add-container button i{
+    color: var(--color2);
+}
+
+#add-container button:hover{
+    background-color: var(--color2);
+}
+
+#add-container button:hover > i{
+    color: var(--color7);
+}
+
+.task{
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--color2);
+    position: relative;
+}
+
+.hide{
+    display: none;
+}
+
+.task:hover .fa-trash{
+    display: block;
+}
+
+.fa.fa-check{
+    border-radius: 50%;
+    border: 1px solid var(--color6);
+    padding: 7px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.fa.fa-check.done{
+    color: var(--color1);
+    border: 1px solid var(--color1);
+}
+
+.fa.fa-check:hover, .fa.fa-trash:hover{
+    color: var(--color7);
+    border-color: var(--color7);
+}
+
+.fa.fa-trash{
+    position: absolute;
+    right: 0;
+    top: 6px;
+    cursor: pointer;
+    display: none;
+}
+
+#empty-tasks{
+    text-align: center;
+}
+
+.voltar{
+    padding-top: 10px;
+    text-align: center;
+}
+
+@media (max-width: 400px) {
+    body{
+        padding-top: 20px;
+        width: 96%;
+    }
+    h2{
+        text-align: center;
+    }
+    #main-container{
+        margin-top: 0;
+        padding: 0px;
+    }
+    .fa.fa-trash{
+        display: block;
+    }
+}

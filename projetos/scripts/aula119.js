@@ -1,4 +1,4 @@
-//119 - Checando se o prototype é de algum objeto
+/*119 - Checando se o prototype é de algum objeto*/
 
 let equipamentosDoCarro={
     preco:11000,

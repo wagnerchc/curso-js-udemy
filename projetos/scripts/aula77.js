@@ -1,3 +1,4 @@
+/*Function*/
 function testeFuncao(a){
     return a;
 }

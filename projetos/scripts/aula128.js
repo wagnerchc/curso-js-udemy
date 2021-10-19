@@ -1,4 +1,4 @@
-//128 - Copiando apenas o prototype - ganha mais performance
+/*128 - Copiando apenas o prototype - ganha mais performance*/
 function Animal(){}
 Animal.prototype.som=true
 Animal.prototype.vivo=true

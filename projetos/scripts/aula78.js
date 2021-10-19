@@ -1,5 +1,4 @@
-//78 - Function (continuação) - número de argumentos de uma função
-
+/*78 - Function (continuação) - número de argumentos de uma função*/
 function testeFuncao2(a,b){
     return a + b
 }

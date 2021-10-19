@@ -1,4 +1,4 @@
-//81 - Number
+/*81 - Number*/
 
 let aNumber = 20
 let bNumber = new Number(20)

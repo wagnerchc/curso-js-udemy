@@ -1,4 +1,4 @@
-//110 - Propriedade prototype
+/*110 - Propriedade prototype*/
 function abc() {
     console.log('teste');
 }

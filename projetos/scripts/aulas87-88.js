@@ -1,7 +1,8 @@
-//87 - Math
-//Math.PI
-//Math.LN2
-//Math.random() - número aleatório
+/*87 - Math
+Math.PI - número PI
+Math.LN2 - logaritmo natural de 2
+Math.LN10 - logaritmo natural de 10
+Math.random() - número aleatório*/
 
 console.log(Math.PI)
 console.log(Math.LN2)//logaritmo natural de 2

@@ -1,7 +1,7 @@
-//127 - Métodos e props no Prototype
-//Usar para constantes ou métodos
-//Quando muda o valor para o filho, muda para o pai
-//Otimiza o uso da memória do computador, pois não cria objetos com muitas propriedades e métodos
+/*127 - Métodos e props no Prototype
+- Usar para constantes ou métodos
+- Quando muda o valor para o filho, muda para o pai
+- Otimiza o uso da memória do computador, pois não cria objetos com muitas propriedades e métodos*/
 
 function Casa(){}
 Casa.prototype.janela=true

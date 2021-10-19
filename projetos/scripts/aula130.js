@@ -1,5 +1,5 @@
-//130 - Construtor temporário
-//Quando precisar alterar propriedades e métodos num filho sem alterar o pai, mas pode prejudicar a performance
+/*130 - Construtor temporário
+Quando precisar alterar propriedades e métodos num filho sem alterar o pai, mas pode prejudicar a performance*/
 
 function ccc (){
     this.mensagem=function(){

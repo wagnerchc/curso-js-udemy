@@ -1,6 +1,6 @@
-//84 - String
-//.length - número de caracteres
-//.length[] - acessar os caracteres como se fosse um array
+/*84 - String
+.length - número de caracteres
+.length[] - acessar os caracteres como se fosse um array*/
 
 let s1 = new String('teste')
 let s2 = 'TESTANDO'

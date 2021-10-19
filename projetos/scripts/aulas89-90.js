@@ -1,12 +1,12 @@
-//89 - Date
-//Date()
-//Date(yyyy,mm,dd)
+/*89 - Date
+Date()
+Date(yyyy,mm,dd)*/
 
 console.log(new Date())
 console.log(new Date(2022,10,21))
 console.log(new Date(01578900050000))
 
-//90 - Date (continuação)
+/*90 - Date (continuação)*/
 let dataTeste = new Date()
 console.log(dataTeste.setMonth(1))
 console.log(new Date(dataTeste.setMonth(11)))

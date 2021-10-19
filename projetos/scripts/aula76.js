@@ -1,3 +1,4 @@
+/*Array - continuação*/
 console.log(a75.length)
 console.log(b75.length)
 

@@ -1,4 +1,4 @@
-//125 - Prototype chain
+/*125 - Prototype chain*/
 
 function Veiculo(){
     this.carenagem='aço';
@@ -24,11 +24,11 @@ trembala.ligar()
 let ferrari2 = new CarroAula4()
 ferrari2.ligar()
 
-//126 - Checando a herança
-console.log(ferrari2 instanceof Veiculo)
-console.log(trembala instanceof Veiculo)
-console.log(trembala instanceof CarroAula4)
-console.log(CarroAula4 instanceof Veiculo)
-console.log(trembala instanceof Object)
-console.log(Veiculo instanceof Object)
-console.log(CarroAula4 instanceof Object)
+/*126 - Checando a herança*/
+console.log(ferrari2 instanceof Veiculo) //true
+console.log(trembala instanceof Veiculo) //true
+console.log(trembala instanceof CarroAula4) //false
+console.log(CarroAula4 instanceof Veiculo) //false
+console.log(trembala instanceof Object) // true
+console.log(Veiculo instanceof Object) // true
+console.log(CarroAula4 instanceof Object) //true
