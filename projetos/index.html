@@ -298,6 +298,204 @@
                         <li>Aulas 146 a 153</li>
                     </ul>
             </div>
+            <div class="subtitulo">
+                <h2><strong>TypeScript</strong></h2>
+                <p><a href="https://nodejs.org/en/download/">Instalar Node.JS</a></p>
+                <p>Linux:</p>
+                    <ul>
+                        <li>sudo apt update</li>
+                        <li>sudo apt install nodejs</li>
+                        <li>sudo apt install npm</li>
+                        <li>nodejs -v</li>
+                    </ul>
+                <p>Instalando o TypeScript no:</p>
+                    <ul>
+                        <li><span><a href="https://www.typescriptlang.org/download">Computador</a></span></li>
+                        <li>VSCode: sudo apt install node-typescript</li>
+                    </ul>
+                <p><a href="typescript/ex001.js">Olá Mundo com TS</a></p>
+                <p><a href="typescript/ex002.js">Type Cast no TS</a></p>
+                    <ul>
+                        <li>let carro: string = "Fusca";</li>
+                        <li>let rodas: number = 4;</li>
+                        <li>let temTetoSolar: boolean = true;</li>
+                        <li>console.log(carro, rodas, temTetoSolar);</li>
+                    </ul>
+                <p><a href="typescript/ex003.js">Array no TS</a></p>
+                    <ul>
+                        <li>var frutas = ['Banana', 'Maçã', 'Laranja'];</li>
+                        <li>frutas.push('Mamão');</li>
+                        <li>var numeros = [1, 2, 3, 4, 5];</li>
+                        <li>console.log(frutas, numeros);</li>
+                        <li>var obj={
+                            name:"Wagner",
+                            cidade:"Curitiba",
+                        }</li>
+                        <li>console.log(obj, obj.name);</li>
+                    </ul>
+                <p><a href="typescript/ex004.js">Tipos de dados exclusivos do TS</a></p>
+                    <ul>Mais comuns:
+                        <ul>
+                            <li>Tuplas</li>
+                            <li>Enum</li>
+                            <li>Any</li>
+                            <li>Void</li>
+                            <li>Null</li>
+                            <li>Undefined</li>
+                            <li>Never</li>
+                        </ul>
+                    </ul>
+                    <ul>Exemplo:
+                        <ul>
+                            <li>let aviao: [string, boolean, number, string];</li>
+                            <li>aviao=['Boeing',true,5,'10 turbinas'];</li>
+                            <li>console.log(aviao);</li>
+                        </ul>
+                    </ul>
+                <p><a href="typescript/ex005.js">Enum</a></p>
+                    <ul>
+                        <li>Não é possível alterar os valores, somente consultar.</li>
+                    </ul>
+                <p><a href="typescript/ex006.js">Any</a></p>
+                    <ul>Exemplo:
+                        <ul>
+                            <li>var qualquerValor;</li>
+                            <li>qualquerValor = 'Wagner';</li>
+                            <li>qualquerValor = 12;</li>
+                            <li>qualquerValor = true;</li>
+                            <li>console.log(qualquerValor);</li>
+                            <li>var listaGeral = [1, 'Wagner', true];</li>
+                            <li>console.log(listaGeral);</li>
+                        </ul>
+                    </ul>
+                <p><a href="typescript/ex007.js">Void</a></p>
+                    <ul>Só aceita valor "undefined"
+                        <ul>
+                            <li>function testandoVoid():void{
+                                console.log("Testando o uso de Void.");
+                            }</li>
+                            <li>console.log(testandoVoid);</li>
+                            <li>console.log(testandoVoid());</li>
+                        </ul>
+                    </ul>
+                <p><a href="#Interface">Interface</a></p>
+                    <ul><span><a href="typescript/ex008.js">Exemplo 1 - Parâmetros obrigatórios</a></span>
+                        <ul>
+                            <li>function imprimirDados(obj: {nome:string,idade:number}){
+                                console.log(`Esta pessoa se chama ${obj.nome} e tem ${obj.idade} anos.`)
+                            }</li>
+                            <li>let pessoa1={nome:'Wagner',idade:36};</li>
+                            <li>let pessoa2={nome:'Aline'};</li>
+                            <li>imprimirDados(pessoa1);</li>
+                            <li>//imprimirDados(pessoa2); //Não será impresso, pois falta um parâmetro</li>
+                        </ul>
+                    </ul>
+                    <ul><span><a href="typescript/ex009.js">Exemplo 2 - Parâmetros opcionais</a></span>
+                        <ul>
+                            <li>interface config{
+                                marca: string,
+                                aro?:number,
+                                tetoSolar:boolean,
+                                cor?:string,
+                            }</li>
+                            <li>function criarCarro(config:config):{marca:string,aro:number,tetoSolar:boolean,cor:string}{
+                                let carro={marca:"Default",aro:16,tetoSolar:false,cor:"Preto"};
+                                if(config.marca){
+                                    carro.marca=config.marca;
+                                }
+                                if(config.aro){
+                                    carro.aro=config.aro;
+                                }
+                                if(config.tetoSolar){
+                                    carro.tetoSolar=config.tetoSolar;
+                                }
+                                if(config.cor){
+                                    carro.cor=config.cor;
+                                }
+                                return carro;
+                            }</li>
+                            <li>let bmw=criarCarro({marca:"BMW",tetoSolar:true});</li>
+                            <li>console.log(bmw);</li>
+                            <li>let ferrari=criarCarro({marca:"Ferrari",aro:20,tetoSolar:true,cor:"Vermelho"});</li>
+                            <li>console.log(ferrari);</li>
+                        </ul>
+                    </ul>
+                <p><a href="typescript/ex010.js">Classes no TS</a></p>
+                    <ul>Funciona igual ao JS
+                        <ul>
+                            <li>class Humano{
+                                nome:string;
+                                idade:number;
+                                constructor(nome:string, idade:number){
+                                    this.nome=nome;
+                                    this.idade=idade;
+                                }
+                                apresentarHumano(){
+                                    return `O nome deste humano é ${this.nome} e ele tem ${this.idade}.`;
+                                }
+                            }</li>
+                            <li>let wagner=new Humano('Wagner',36);</li>
+                            <li>console.log(wagner);</li>
+                            <li>console.log(wagner.apresentarHumano());</li>
+                        </ul>
+                    </ul>
+                <p><a href="typescript/ex011.js">Herança</a></p>
+                    <ul>Semelhante a herança no JS
+                        <ul>
+                            <li>class Humano{
+                                nome:string;
+                                idade:number;
+                                constructor(nome:string, idade:number){
+                                    this.nome=nome;
+                                    this.idade=idade;
+                                }
+                                apresentarHumano(){
+                                    return `O nome deste humano é ${this.nome} e ele tem ${this.idade}.`;
+                                }
+                            }</li>
+                            <li>class Ninja extends Humano{
+                                classe:string;
+                                constructor(nome:string,idade:number,classe:string){
+                                    super(nome,idade);
+                                    this.classe=classe;
+                                }
+                                atirarEstrelaNinja(){
+                                    console.log(`O ninja atirou a shuriken.`)
+                                }
+                            }</li>
+                            <li>let ninja1=new Ninja('Naruto',36,"Hokage");</li>
+                            <li>console.log(ninja1);</li>
+                            <li>console.log(ninja1.apresentarHumano());</li>
+                            <li>console.log(ninja1.atirarEstrelaNinja());</li>
+                        </ul>
+                    </ul>
+                <p><a href="#Funcoes">Funções</a></p>
+                    <ul><span><a href="typescript/ex012.js">Exemplo 1 - Parâmetros obrigatórios</a></span>
+                        <ul>
+                            <li>function cumprimento(saudacao:string,nome:string):string {
+                                return `Olá ${saudacao} ${nome}, tudo bem? Tenha um bom dia!`;
+                            }</li>
+                            <li>console.log(cumprimento(`Sr`,`TypeScript`));</li>
+                        </ul>
+                    </ul>
+                    <ul><span><a href="#">Exemplo 2 - Parâmetros opcionais</a></span>
+                        <ul>Não pode ter um parâmetro opcional, antes de um obrigatório.
+                            <li>function descreverCarro(marca:string,aro?:number){
+                                if(aro){
+                                    console.log(`O carro é da marca ${marca} e tem um aro ${aro}.`);
+                                }else{
+                                    console.log(`O carro é da marca ${marca}.`);
+                                }
+                            }</li>
+                            <li>descreverCarro("BMW",20);</li>
+                            <li>descreverCarro("VW");</li>
+                        </ul>
+                    </ul>
+                <p><a href="#">Generics</a></p>
+                    <ul>
+                        <li></li>
+                    </ul>
+            </div>
         </div>
     </main>
     <footer>
