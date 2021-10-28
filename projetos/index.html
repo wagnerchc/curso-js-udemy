@@ -492,8 +492,27 @@
                         </ul>
                     </ul>
                 <p><a href="#">Generics</a></p>
-                    <ul>
-                        <li></li>
+                    <ul><span><a href="typescript/ex014.js">Exemplo 1 - uso amplo, sem especificar entrada ou saída</a></span>
+                        <ul>
+                            <li>function identity<T>(arg:T):T{
+                                console.log(typeof arg);
+                                return arg;
+                            }</li>
+                            <li>console.log(identity('string'));</li>
+                            <li>console.log(identity(5));</li>
+                            <li>console.log(identity(true));</li>
+                        </ul>
+                    </ul>
+                    <ul><span><a href="typescript/ex015.js">Exemplo 2 - determinar o tipo ao invocar a Generics ou modificar a saída</a></span>
+                        <ul>
+                            <li>function identity<T>(arg:T):string {
+                                console.log(typeof arg);
+                                return `Este é o resultado final: ${arg.toString()}`;
+                            }</li>
+                            <li>console.log(identity<string>('string'));</li>
+                            <li>console.log(identity<number>(5));</li>
+                            <li>console.log(identity<boolean>(true));</li>
+                        </ul>
                     </ul>
             </div>
         </div>

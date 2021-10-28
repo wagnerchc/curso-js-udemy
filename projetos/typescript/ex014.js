@@ -1,4 +1,4 @@
-function identity<T>(arg:T):T{
+function identity(arg) {
     console.log(typeof arg);
     return arg;
 }
